@@ -35,7 +35,7 @@ node['apache']['sites'].each do |site_name, site_data|
     source 'custom.erb'
     mode '0644'
     variables(
-      document_root: "#{document_root}",
+      document_root: document_root,
       port: site_data['port']
     )
     notifies :restart, 'service[httpd]'
