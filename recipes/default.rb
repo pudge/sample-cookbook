@@ -15,7 +15,7 @@
 
 package 'httpd' do
   action :install
-#end
+end
 
 # Disable the default virtual host
 execute 'mv /etc/httpd/conf.d/welcome.conf /etc/httpd/conf.d/welcome.conf.disabled' do
